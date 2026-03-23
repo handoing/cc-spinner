@@ -9,8 +9,8 @@
 ## One-click setup / uninstall
 
 ```bash
-npx cc-spinner setup
-npx cc-spinner clear
+npx @handoing/cc-spinner setup
+npx @handoing/cc-spinner clear
 ```
 
 ## Features
@@ -26,13 +26,13 @@ npx cc-spinner clear
 Install globally with npm:
 
 ```bash
-npm install -g cc-spinner
+npm install -g @handoing/cc-spinner
 ```
 
 Or run it directly with `npx`:
 
 ```bash
-npx cc-spinner <command>
+npx @handoing/cc-spinner <command>
 ```
 
 ## Usage
@@ -157,7 +157,7 @@ Example:
 
 ## Development notes
 
-- Package name: `cc-spinner`
+- Package name: `@handoing/cc-spinner`
 - Current version: `1.0.0`
 - CLI framework: `commander`
 - License declared in [`package.json`](package.json)
