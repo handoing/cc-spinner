@@ -4,6 +4,7 @@ const { program } = require("commander");
 const { version } = require("../package.json");
 const setup = require("../src/commands/setup");
 const clear = require("../src/commands/clear");
+const list = require("../src/commands/list");
 
 program
   .name("cc-spinner")
@@ -22,6 +23,13 @@ program
   .description("Clear spinner verbs configuration from settings")
   .action(() => {
     clear();
+  });
+
+program
+  .command("list")
+  .description("List themes and select one to set as current spinner verbs")
+  .action(async () => {
+    await list();
   });
 
 program.parse(process.argv);

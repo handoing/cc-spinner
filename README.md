@@ -18,6 +18,7 @@ npx @handoing/cc-spinner clear
 - Configure Claude Code spinner verbs with a single command
 - Support built-in theme presets and language presets
 - Support custom JSON configuration files
+- List built-in themes and interactively select one in terminal
 - Reset spinner verbs configuration when needed
 - Automatically write configuration into Claude Code settings
 
@@ -70,6 +71,15 @@ Behavior summary:
 - If still not found, it falls back to the built-in `default` theme.
 - If a relative or absolute path is provided, it loads that JSON file directly.
 
+### List and select theme interactively
+
+Use the `list` command to display all built-in themes, each with a random example spinner verb.
+Press `Enter` to select the first theme by default, or input the index number and press `Enter`.
+
+```bash
+cc-spinner list
+```
+
 ### Clear spinner verbs
 
 Use the `clear` command to replace the current spinner verb configuration with an empty verb list.
@@ -99,12 +109,14 @@ Built-in language files are stored in [`language/`](language/):
 
 ## How it works
 
-The CLI entry point is [`bin/cc-spinner.js`](bin/cc-spinner.js). It provides two commands:
+The CLI entry point is [`bin/cc-spinner.js`](bin/cc-spinner.js). It provides three commands:
 
 - `setup`: implemented in [`setup()`](src/commands/setup.js:3)
+- `list`: implemented in [`list()`](src/commands/list.js:4)
 - `clear`: implemented in [`clear()`](src/commands/clear.js:3)
 
-Configuration resolution and settings updates are handled in [`resolveSpinnerVerbsData()`](src/utils.js:32) and [`updateSettings()`](src/utils.js:68).
+Configuration resolution and settings updates are handled in [`resolveSpinnerVerbsData()`](src/utils.js:33) and [`updateSettings()`](src/utils.js:69).
+Theme listing and interactive selection are handled in [`listThemeNames()`](src/utils.js:88) and [`promptSingleSelect()`](src/utils.js:116).
 
 The tool writes to Claude Code settings at [`SETTINGS_PATH`](src/constants.js:4), which resolves to:
 
@@ -144,6 +156,7 @@ Example:
 ├── src/
 │   ├── commands/
 │   │   ├── clear.js
+│   │   ├── list.js
 │   │   └── setup.js
 │   ├── constants.js
 │   └── utils.js

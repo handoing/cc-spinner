@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const readline = require("readline");
 const { SETTINGS_PATH, THEME_DIR, LANGUAGE_DIR, DEFAULT_THEME_FILE } = require("./constants");
 
 function readJsonFile(filePath) {
@@ -81,7 +82,80 @@ function updateSettings(spinnerVerbs) {
   }
 }
 
+function listThemeNames() {
+  try {
+    if (!fs.existsSync(THEME_DIR)) {
+      return [];
+    }
+
+    const themeNames = fs
+      .readdirSync(THEME_DIR, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && path.extname(entry.name) === ".json")
+      .map((entry) => path.basename(entry.name, ".json"))
+      .sort((a, b) => a.localeCompare(b));
+
+    const themesWithExamples = themeNames.map(name => {
+      const data = resolveSpinnerVerbsData(name);
+      let example = "";
+      if (data && data.verbs && data.verbs.length > 0) {
+        const randomIndex = Math.floor(Math.random() * data.verbs.length);
+        example = data.verbs[randomIndex];
+      }
+      return { name, example };
+    });
+
+    return themesWithExamples;
+  } catch (error) {
+    console.error(`Error listing themes from ${THEME_DIR}:`, error.message);
+    return [];
+  }
+}
+
+function promptSingleSelect(options) {
+  if (!options || options.length === 0) {
+    return Promise.resolve(null);
+  }
+
+  console.log("Available themes:");
+  options.forEach((theme, index) => {
+    const exampleStr = theme.example ? ` eg: ${theme.example}...` : "";
+    console.log(`${index + 1}. ${theme.name}${exampleStr}`);
+  });
+  console.log("");
+  console.log("Press Enter to select default option [1], or type number:");
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  return new Promise((resolve) => {
+    rl.question("> ", (answer) => {
+      const input = answer.trim();
+
+      if (!input) {
+        rl.close();
+        resolve(options[0].name);
+        return;
+      }
+
+      const num = Number(input);
+      if (Number.isInteger(num) && num >= 1 && num <= options.length) {
+        rl.close();
+        resolve(options[num - 1].name);
+        return;
+      }
+
+      console.error("Invalid selection.");
+      rl.close();
+      resolve(null);
+    });
+  });
+}
+
 module.exports = {
   resolveSpinnerVerbsData,
-  updateSettings
+  updateSettings,
+  listThemeNames,
+  promptSingleSelect
 };
