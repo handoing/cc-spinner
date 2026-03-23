@@ -4,6 +4,8 @@
 
 ![](https://img.shields.io/badge/Node.js-18%2B-brightgreen?style=flat-square) [![npm]](https://www.npmjs.com/package/@handoing/cc-spinner)
 
+![](./assets/poster.jpeg)
+
 `cc-spinner` is a CLI tool for configuring spinner verbs for Claude Code.
 
 It allows you to quickly switch the loading verb set used by Claude Code with built-in themes, built-in language packs, or a custom JSON file.

@@ -4,6 +4,8 @@
 
 ![](https://img.shields.io/badge/Node.js-18%2B-brightgreen?style=flat-square) [![npm]](https://www.npmjs.com/package/@handoing/cc-spinner)
 
+![](./assets/poster.jpeg)
+
 `cc-spinner` は、Claude Code の spinner verbs（読み込み時の動詞文言）を設定するための CLI ツールです。
 
 内蔵テーマ、内蔵言語パック、またはカスタム JSON ファイルを使って、Claude Code の読み込み文言をすばやく切り替えられます。
