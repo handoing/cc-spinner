@@ -12,16 +12,16 @@ It allows you to quickly switch the loading verb set used by Claude Code with bu
 
 > **Note:** This tool requires Claude Code version **v2.1.22** or higher.
 
-## One-click setup
+## Use via SKILL
+
+```bash
+npx skills add https://github.com/handoing/cc-spinner
+```
+
+## Use via npx
 
 ```bash
 npx @handoing/cc-spinner setup
-```
-
-## One-click uninstall
-
-```bash
-npx @handoing/cc-spinner clear
 ```
 
 ## Features
@@ -197,7 +197,7 @@ Example:
 ## Development notes
 
 - Package name: `@handoing/cc-spinner`
-- Current version: `1.1.1`
+- Current version: `1.1.2`
 - CLI framework: `commander`
 - License declared in [`package.json`](package.json)
 

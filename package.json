@@ -1,6 +1,6 @@
 {
   "name": "@handoing/cc-spinner",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Configure the spinner verbs for your claude code",
   "main": "bin/cc-spinner.js",
   "bin": {
