@@ -148,7 +148,7 @@ The tool writes to Claude Code settings at [`SETTINGS_PATH`](src/constants.js#L4
 
 ## Custom JSON format
 
-When using a custom file path with [`cc-spinner setup`](bin/cc-spinner.js#L14), the JSON file should contain a `spinnerVerbs` field.
+When using a custom file path with `cc-spinner setup`, the JSON file should contain a `spinnerVerbs` field.
 
 Example:
 
