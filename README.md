@@ -128,8 +128,15 @@ The CLI entry point is [`bin/cc-spinner.js`](bin/cc-spinner.js). It provides thr
 - `list`: implemented in [`list()`](src/commands/list.js:4)
 - `clear`: implemented in [`clear()`](src/commands/clear.js:3)
 
-Configuration resolution and settings updates are handled in [`resolveSpinnerVerbsData()`](src/utils.js:33) and [`updateSettings()`](src/utils.js:69).
-Theme listing and interactive selection are handled in [`listThemeNames()`](src/utils.js:88) and [`promptSingleSelect()`](src/utils.js:116).
+Configuration resolution and settings updates are handled in:
+
+- [`resolveSpinnerVerbsData()`](src/utils.js:33)
+- [`updateSettings()`](src/utils.js:69)
+
+Theme listing and interactive selection are handled in:
+
+- [`listThemeNames()`](src/utils.js:88)
+- [`promptSingleSelect()`](src/utils.js:116)
 
 The tool writes to Claude Code settings at [`SETTINGS_PATH`](src/constants.js:4), which resolves to:
 
@@ -188,7 +195,7 @@ Example:
 ## Development notes
 
 - Package name: `@handoing/cc-spinner`
-- Current version: `1.0.0`
+- Current version: `1.1.0`
 - CLI framework: `commander`
 - License declared in [`package.json`](package.json)
 
