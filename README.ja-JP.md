@@ -6,7 +6,7 @@
 
 ![](./assets/poster.jpeg)
 
-`cc-spinner` は、Claude Code の spinner verbs（読み込み時の動詞文言）を設定するための CLI ツールです。
+<strong>cc-spinner</strong> は、Claude Code の spinner verbs（読み込み時の動詞文言）を設定するための CLI ツールです。
 
 内蔵テーマ、内蔵言語パック、またはカスタム JSON ファイルを使って、Claude Code の読み込み文言をすばやく切り替えられます。
 

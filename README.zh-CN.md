@@ -6,7 +6,7 @@
 
 ![](./assets/poster.jpeg)
 
-`cc-spinner` 是一个用于配置 Claude Code spinner verbs（加载动词文案）的命令行工具。
+<strong>cc-spinner</strong> 是一个用于配置 Claude Code spinner verbs（加载动词文案）的命令行工具。
 
 你可以通过内置主题、内置语言包或自定义 JSON 文件，快速切换 Claude Code 的加载文案配置。
 

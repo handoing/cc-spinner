@@ -115,6 +115,8 @@ Users can define their own spinner verbs via a JSON file:
 }
 ```
 
+Verbs do not need to add ellipses because they will default to `...`
+
 Then apply it using:
 
 ```bash

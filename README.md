@@ -6,7 +6,7 @@
 
 ![](./assets/poster.jpeg)
 
-`cc-spinner` is a CLI tool for configuring spinner verbs for Claude Code.
+<strong>cc-spinner</strong> is a CLI tool for configuring spinner verbs for Claude Code.
 
 It allows you to quickly switch the loading verb set used by Claude Code with built-in themes, built-in language packs, or a custom JSON file.
 
