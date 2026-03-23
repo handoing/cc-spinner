@@ -2,14 +2,23 @@
 
 [中文文档](README.zh-CN.md) | [日本語](README.ja-JP.md)
 
+![](https://img.shields.io/badge/Node.js-18%2B-brightgreen?style=flat-square) [![npm]](https://www.npmjs.com/package/@handoing/cc-spinner)
+
 `cc-spinner` is a CLI tool for configuring spinner verbs for Claude Code. It allows you to quickly switch the loading verb set used by Claude Code with built-in themes, built-in language packs, or a custom JSON file.
+
+![](./assets/demo.gif)
 
 > **Note:** This tool requires Claude Code version **v2.1.22** or higher.
 
-## One-click setup / uninstall
+## One-click setup
 
 ```bash
 npx @handoing/cc-spinner setup
+```
+
+## One-click uninstall
+
+```bash
 npx @handoing/cc-spinner clear
 ```
 
@@ -94,18 +103,22 @@ cc-spinner clear
 
 Built-in theme files are stored in [`theme/`](theme/):
 
-- `default`
-- `animal`
-- `emoji`
-- `philosophy`
+- [`animal`](theme/animal.json)
+- [`default`](theme/default.json)
+- [`dirty`](theme/dirty.json)
+- [`emo`](theme/emo.json)
+- [`emoji`](theme/emoji.json)
+- [`movies`](theme/movies.json)
+- [`philosophy`](theme/philosophy.json)
+- [`travel`](theme/travel.json)
 
 ### Languages
 
 Built-in language files are stored in [`language/`](language/):
 
-- `en-US`
-- `zh-CN`
-- `ja-JP`
+- [`en-US`](language/en-US.json)
+- [`zh-CN`](language/zh-CN.json)
+- [`ja-JP`](language/ja-JP.json)
 
 ## How it works
 
@@ -163,8 +176,12 @@ Example:
 ├── theme/
 │   ├── animal.json
 │   ├── default.json
+│   ├── dirty.json
+│   ├── emo.json
 │   ├── emoji.json
-│   └── philosophy.json
+│   ├── movies.json
+│   ├── philosophy.json
+│   └── travel.json
 └── package.json
 ```
 
@@ -178,3 +195,5 @@ Example:
 ## License
 
 This project is licensed under the ISC License. See [LICENSE](LICENSE).
+
+[npm]: https://img.shields.io/npm/v/@handoing/cc-spinner.svg?style=flat-square
