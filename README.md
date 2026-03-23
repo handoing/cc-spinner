@@ -197,7 +197,7 @@ Example:
 ## Development notes
 
 - Package name: `@handoing/cc-spinner`
-- Current version: `1.1.0`
+- Current version: `1.1.1`
 - CLI framework: `commander`
 - License declared in [`package.json`](package.json)
 
