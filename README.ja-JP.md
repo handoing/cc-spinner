@@ -6,6 +6,13 @@
 
 > **注意：** このツールは Claude Code バージョン **v2.1.22** 以降をサポートしています。
 
+## ワンクリックで設定 / アンインストール
+
+```bash
+npx cc-spinner setup
+npx cc-spinner clear
+```
+
 ## 主な機能
 
 - 1 コマンドで Claude Code の spinner verbs を設定
