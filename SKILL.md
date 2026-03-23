@@ -1,56 +1,101 @@
 ---
+description: 当用户希望修改、切换、自定义或重置 Claude Code
+  的加载动画文案（spinner
+  verbs）时使用此技能。适用于用户提到"spinner"、"加载文案"、"loading
+  verbs"、"cc-spinner"或希望更换语言/风格的场景。
 name: cc-spinner
-description: Use this skill whenever the user wants to change, customize, reset, or configure the loading spinner verbs (the thinking/loading text) in Claude Code. Also trigger this skill when the user mentions "cc-spinner", "spinner themes", "loading verbs", or wants to change the language of the loading animation.
 ---
 
 # cc-spinner
 
-`cc-spinner` is a CLI tool that configures the spinner verbs (the little loading messages) for Claude Code.
+`cc-spinner` 是一个用于配置 Claude Code spinner verbs（加载提示文案）的
+CLI 工具。
 
-As an AI assistant, you can use this skill to help the user customize their loading experience by running `cc-spinner` commands via your `Bash` tool.
+作为 AI 助手，你需要通过执行 `npx @handoing/cc-spinner`
+命令，帮助用户快速切换或管理加载动画文案。
 
-## Available Built-in Presets
+------------------------------------------------------------------------
 
-**Themes:**
-- `animal`
-- `default`
-- `dirty`
-- `emo`
-- `emoji`
-- `movies`
-- `philosophy`
-- `travel`
+## 🎯 触发场景
 
-**Languages:**
-- `en-US`
-- `zh-CN`
-- `ja-JP`
+当用户出现以下意图时，必须使用此技能：
 
-## How to use cc-spinner
+-   修改 spinner 文案
+-   更换 loading 动画风格（如 emoji、电影风等）
+-   切换语言（中文 / 英文 / 日文）
+-   重置 spinner
+-   使用自定义 JSON 配置
+-   提到关键词：
+    -   `cc-spinner`
+    -   `spinner`
+    -   `loading verbs`
+    -   `加载文案`
+    -   `加载动画`
 
-When the user asks you to change the spinner theme, language, or reset it, you MUST use your `Bash` tool to execute the appropriate `npx` command.
+------------------------------------------------------------------------
 
-### 1. Setting up a preset theme or language
-If the user asks for a specific theme or language (e.g., "change spinner to emoji" or "use Chinese spinner"), run:
-```bash
-npx @handoing/cc-spinner setup <preset-name>
-```
-*Example:* `npx @handoing/cc-spinner setup emoji` or `npx @handoing/cc-spinner setup zh-CN`
+## ⚙️ 核心能力
 
-If the user just asks to "change the spinner" but doesn't specify a theme, list the available themes and languages from the section above and ask them which one they prefer.
+### 1️⃣ 设置主题 / 语言 / 自定义配置
 
-### 2. Setting up from a custom JSON file
-If the user provides a path to a custom JSON file:
-```bash
-npx @handoing/cc-spinner setup <path-to-json>
+``` bash
+npx @handoing/cc-spinner setup <name>
 ```
 
-### 3. Clearing / Resetting the spinner
-If the user wants to reset, clear, or remove the custom spinner verbs:
-```bash
+支持： Themes: animal, default, dirty, emo, emoji, movies, philosophy,
+travel Languages: en-US, zh-CN, ja-JP
+
+示例：
+
+``` bash
+npx @handoing/cc-spinner setup emoji
+npx @handoing/cc-spinner setup zh-CN
+npx @handoing/cc-spinner setup ./my-spinner.json
+```
+
+------------------------------------------------------------------------
+
+### 2️⃣ 未指定参数
+
+``` bash
+npx @handoing/cc-spinner setup
+```
+
+等价于 default
+
+------------------------------------------------------------------------
+
+### 3️⃣ 重置
+
+``` bash
 npx @handoing/cc-spinner clear
 ```
 
-## IMPORTANT RULES
-- **NEVER** run `npx @handoing/cc-spinner list`. This command launches an interactive terminal prompt which will hang your Bash tool. If the user wants to see available themes, simply read them out from the "Available Built-in Presets" list above.
-- Always use the `npx @handoing/cc-spinner ...` prefix to ensure the command runs successfully even if the user hasn't installed the package globally.
+------------------------------------------------------------------------
+
+## ⚠️ 禁止
+
+不要执行：
+
+``` bash
+npx @handoing/cc-spinner list
+```
+
+------------------------------------------------------------------------
+
+## JSON 格式
+
+``` json
+{
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": ["loading","thinking","preparing"]
+  }
+}
+```
+
+------------------------------------------------------------------------
+
+配置路径：
+
+    ~/.claude/settings.json
