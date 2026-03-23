@@ -1,0 +1,40 @@
+{
+  "name": "cc-spinner",
+  "version": "1.0.0",
+  "description": "Configure the spinner verbs for your claude code",
+  "main": "bin/cc-spinner.js",
+  "bin": {
+    "cc-spinner": "bin/cc-spinner.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "theme/",
+    "language/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handoing/cc-spinner.git"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "spinner",
+    "cli",
+    "terminal",
+    "theme",
+    "loader"
+  ],
+  "author": "handoing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/handoing/cc-spinner/issues"
+  },
+  "homepage": "https://github.com/handoing/cc-spinner#readme",
+  "dependencies": {
+    "commander": "^14.0.3"
+  }
+}
