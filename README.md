@@ -4,7 +4,9 @@
 
 ![](https://img.shields.io/badge/Node.js-18%2B-brightgreen?style=flat-square) [![npm]](https://www.npmjs.com/package/@handoing/cc-spinner)
 
-`cc-spinner` is a CLI tool for configuring spinner verbs for Claude Code. It allows you to quickly switch the loading verb set used by Claude Code with built-in themes, built-in language packs, or a custom JSON file.
+`cc-spinner` is a CLI tool for configuring spinner verbs for Claude Code.
+
+It allows you to quickly switch the loading verb set used by Claude Code with built-in themes, built-in language packs, or a custom JSON file.
 
 ![](./assets/demo.gif)
 
@@ -124,21 +126,21 @@ Built-in language files are stored in [`language/`](language/):
 
 The CLI entry point is [`bin/cc-spinner.js`](bin/cc-spinner.js). It provides three commands:
 
-- `setup`: implemented in [`setup()`](src/commands/setup.js:3)
-- `list`: implemented in [`list()`](src/commands/list.js:4)
-- `clear`: implemented in [`clear()`](src/commands/clear.js:3)
+- `setup`: implemented in [`setup()`](src/commands/setup.js#L3)
+- `list`: implemented in [`list()`](src/commands/list.js#L4)
+- `clear`: implemented in [`clear()`](src/commands/clear.js#L3)
 
 Configuration resolution and settings updates are handled in:
 
-- [`resolveSpinnerVerbsData()`](src/utils.js:33)
-- [`updateSettings()`](src/utils.js:69)
+- [`resolveSpinnerVerbsData()`](src/utils.js#L33)
+- [`updateSettings()`](src/utils.js#L69)
 
 Theme listing and interactive selection are handled in:
 
-- [`listThemeNames()`](src/utils.js:88)
-- [`promptSingleSelect()`](src/utils.js:116)
+- [`listThemeNames()`](src/utils.js#L88)
+- [`promptSingleSelect()`](src/utils.js#L116)
 
-The tool writes to Claude Code settings at [`SETTINGS_PATH`](src/constants.js:4), which resolves to:
+The tool writes to Claude Code settings at [`SETTINGS_PATH`](src/constants.js#L4), which resolves to:
 
 ```text
 ~/.claude/settings.json
@@ -146,7 +148,7 @@ The tool writes to Claude Code settings at [`SETTINGS_PATH`](src/constants.js:4)
 
 ## Custom JSON format
 
-When using a custom file path with [`cc-spinner setup`](bin/cc-spinner.js:14), the JSON file should contain a `spinnerVerbs` field.
+When using a custom file path with [`cc-spinner setup`](bin/cc-spinner.js#L14), the JSON file should contain a `spinnerVerbs` field.
 
 Example:
 
