@@ -10,7 +10,7 @@
 
 内蔵テーマ、内蔵言語パック、またはカスタム JSON ファイルを使って、Claude Code の読み込み文言をすばやく切り替えられます。
 
-![](./assets/demo.gif)
+![](./assets/skill.gif)
 
 > **注意：** このツールは Claude Code バージョン **v2.1.22** 以降をサポートしています。
 
@@ -19,8 +19,6 @@
 ```bash
 npx skills add https://github.com/handoing/cc-spinner
 ```
-
-![](./assets/skill.gif)
 
 ## npx での使用
 

@@ -10,7 +10,7 @@
 
 你可以通过内置主题、内置语言包或自定义 JSON 文件，快速切换 Claude Code 的加载文案配置。
 
-![](./assets/demo.gif)
+![](./assets/skill.gif)
 
 > **注意：** 本工具仅支持 Claude Code **v2.1.22** 及以上版本。
 
@@ -19,8 +19,6 @@
 ```bash
 npx skills add https://github.com/handoing/cc-spinner
 ```
-
-![](./assets/skill.gif)
 
 ## 通过 npx 使用
 

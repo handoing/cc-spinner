@@ -10,7 +10,7 @@
 
 It allows you to quickly switch the loading verb set used by Claude Code with built-in themes, built-in language packs, or a custom JSON file.
 
-![](./assets/demo.gif)
+![](./assets/skill.gif)
 
 > **Note:** This tool requires Claude Code version **v2.1.22** or higher.
 
@@ -19,8 +19,6 @@ It allows you to quickly switch the loading verb set used by Claude Code with bu
 ```bash
 npx skills add https://github.com/handoing/cc-spinner
 ```
-
-![](./assets/skill.gif)
 
 ## Use via npx
 
