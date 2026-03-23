@@ -18,6 +18,8 @@
 npx skills add https://github.com/handoing/cc-spinner
 ```
 
+![](./assets/skill.gif)
+
 ## 通过 npx 使用
 
 ```bash

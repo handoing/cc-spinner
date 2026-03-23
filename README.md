@@ -18,6 +18,8 @@ It allows you to quickly switch the loading verb set used by Claude Code with bu
 npx skills add https://github.com/handoing/cc-spinner
 ```
 
+![](./assets/skill.gif)
+
 ## Use via npx
 
 ```bash
