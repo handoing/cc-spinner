@@ -108,10 +108,13 @@ cc-spinner clear
 Built-in theme files are stored in [`theme/`](theme/):
 
 - [`animal`](theme/animal.json)
+- [`ascii`](theme/ascii.json)
 - [`default`](theme/default.json)
 - [`dirty`](theme/dirty.json)
 - [`emo`](theme/emo.json)
 - [`emoji`](theme/emoji.json)
+- [`madness`](theme/madness.json)
+- [`martian`](theme/martian.json)
 - [`movies`](theme/movies.json)
 - [`philosophy`](theme/philosophy.json)
 - [`travel`](theme/travel.json)
@@ -186,10 +189,13 @@ Example:
 │   └── utils.js
 ├── theme/
 │   ├── animal.json
+│   ├── ascii.json
 │   ├── default.json
 │   ├── dirty.json
 │   ├── emo.json
 │   ├── emoji.json
+│   ├── madness.json
+│   ├── martian.json
 │   ├── movies.json
 │   ├── philosophy.json
 │   └── travel.json
