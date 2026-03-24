@@ -4,7 +4,7 @@
 
 ![](https://img.shields.io/badge/Node.js-18%2B-brightgreen?style=flat-square) [![npm]](https://www.npmjs.com/package/@handoing/cc-spinner)
 
-![](./assets/poster.jpeg)
+![](./assets/poster.png)
 
 <strong>cc-spinner</strong> is a CLI tool for configuring spinner verbs for Claude Code.
 
@@ -199,7 +199,7 @@ Example:
 ## Development notes
 
 - Package name: `@handoing/cc-spinner`
-- Current version: `1.1.2`
+- Current version: `1.1.3`
 - CLI framework: `commander`
 - License declared in [`package.json`](package.json)
 
